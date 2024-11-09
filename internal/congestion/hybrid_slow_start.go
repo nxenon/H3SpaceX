@@ -3,7 +3,7 @@ package congestion
 import (
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
 )
 
 // Note(pwestin): the magic clamping numbers come from the original code in

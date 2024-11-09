@@ -1,7 +1,7 @@
 package wire
 
 import (
-	"github.com/nxenon/xquic-go/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
 )
 
 // A HandshakeDoneFrame is a HANDSHAKE_DONE frame

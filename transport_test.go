@@ -10,10 +10,10 @@ import (
 	"syscall"
 	"time"
 
-	mocklogging "github.com/nxenon/xquic-go/internal/mocks/logging"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/wire"
-	"github.com/nxenon/xquic-go/logging"
+	mocklogging "github.com/nxenon/h3spacexgo/internal/mocks/logging"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacexgo/logging"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 // MaxDatagramSize is the maximum size of a DATAGRAM frame (RFC 9221).

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
 )
 
 var (

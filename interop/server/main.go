@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/nxenon/xquic-go"
-	"github.com/nxenon/xquic-go/http3"
-	"github.com/nxenon/xquic-go/internal/qtls"
-	"github.com/nxenon/xquic-go/interop/http09"
-	"github.com/nxenon/xquic-go/interop/utils"
+	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacexgo/http3"
+	"github.com/nxenon/h3spacexgo/internal/qtls"
+	"github.com/nxenon/h3spacexgo/interop/http09"
+	"github.com/nxenon/h3spacexgo/interop/utils"
 )
 
 var tlsConf *tls.Config

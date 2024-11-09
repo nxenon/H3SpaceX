@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/nxenon/xquic-go"
+	"github.com/nxenon/h3spacexgo"
 )
 
 const h09alpn = "hq-interop"

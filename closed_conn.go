@@ -4,7 +4,7 @@ import (
 	"math/bits"
 	"net"
 
-	"github.com/nxenon/xquic-go/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/utils"
 )
 
 // A closedLocalConn is a connection that we closed locally.

@@ -3,9 +3,9 @@ package ackhandler
 import (
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

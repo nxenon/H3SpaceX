@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	quic "github.com/nxenon/xquic-go"
+	quic "github.com/nxenon/h3spacexgo"
 	"github.com/quic-go/qpack"
 	"io"
 	"net/http"

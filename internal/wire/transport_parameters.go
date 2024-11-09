@@ -11,10 +11,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/qerr"
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/qerr"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 // AdditionalTransportParametersClient are additional transport parameters that will be added

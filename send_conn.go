@@ -3,8 +3,8 @@ package quic
 import (
 	"net"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/utils"
 )
 
 // A sendConn allows sending using a simple Write() on a non-connected packet conn.

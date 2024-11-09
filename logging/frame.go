@@ -1,6 +1,6 @@
 package logging
 
-import "github.com/nxenon/xquic-go/internal/wire"
+import "github.com/nxenon/h3spacexgo/internal/wire"
 
 // A Frame is a QUIC frame
 type Frame interface{}

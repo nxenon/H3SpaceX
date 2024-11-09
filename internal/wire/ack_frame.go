@@ -6,9 +6,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 var errInvalidAckRanges = errors.New("AckFrame: ACK frame contains invalid ACK ranges")

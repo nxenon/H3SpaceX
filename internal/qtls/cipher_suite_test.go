@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/nxenon/xquic-go/internal/testdata"
+	"github.com/nxenon/h3spacexgo/internal/testdata"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

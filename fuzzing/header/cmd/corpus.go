@@ -5,10 +5,10 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"github.com/nxenon/xquic-go/fuzzing/header"
-	"github.com/nxenon/xquic-go/fuzzing/internal/helper"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/fuzzing/header"
+	"github.com/nxenon/h3spacexgo/fuzzing/internal/helper"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 )
 
 const version = protocol.Version1

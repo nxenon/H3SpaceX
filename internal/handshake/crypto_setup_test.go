@@ -11,12 +11,12 @@ import (
 	"reflect"
 	"time"
 
-	mocktls "github.com/nxenon/xquic-go/internal/mocks/tls"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/qerr"
-	"github.com/nxenon/xquic-go/internal/testdata"
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/internal/wire"
+	mocktls "github.com/nxenon/h3spacexgo/internal/mocks/tls"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/qerr"
+	"github.com/nxenon/h3spacexgo/internal/testdata"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

@@ -11,13 +11,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/qerr"
-	"github.com/nxenon/xquic-go/internal/qtls"
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/internal/wire"
-	"github.com/nxenon/xquic-go/logging"
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/qerr"
+	"github.com/nxenon/h3spacexgo/internal/qtls"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacexgo/logging"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 type quicVersionContextKey struct{}

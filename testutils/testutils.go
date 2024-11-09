@@ -6,9 +6,9 @@ package testutils
 import (
 	"fmt"
 
-	"github.com/nxenon/xquic-go/internal/handshake"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/internal/handshake"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 )
 
 // writePacket returns a new raw packet with the specified header and payload

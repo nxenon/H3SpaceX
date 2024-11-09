@@ -3,7 +3,7 @@ package http3
 import (
 	"io"
 
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 // CapsuleType is the type of the capsule.

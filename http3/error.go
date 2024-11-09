@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/nxenon/xquic-go"
+	"github.com/nxenon/h3spacexgo"
 )
 
 // Error is returned from the round tripper (for HTTP clients)

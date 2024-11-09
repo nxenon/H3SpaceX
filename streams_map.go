@@ -7,10 +7,10 @@ import (
 	"net"
 	"sync"
 
-	"github.com/nxenon/xquic-go/internal/flowcontrol"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/qerr"
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/internal/flowcontrol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/qerr"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 )
 
 type streamError struct {

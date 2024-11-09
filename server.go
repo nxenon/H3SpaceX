@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/handshake"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/qerr"
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/internal/wire"
-	"github.com/nxenon/xquic-go/logging"
+	"github.com/nxenon/h3spacexgo/internal/handshake"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/qerr"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacexgo/logging"
 )
 
 // ErrServerClosed is returned by the Listener or EarlyListener's Accept method after a call to Close.

@@ -3,9 +3,9 @@ package ackhandler
 import (
 	"sync"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	list "github.com/nxenon/xquic-go/internal/utils/linkedlist"
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	list "github.com/nxenon/h3spacexgo/internal/utils/linkedlist"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 )
 
 // interval is an interval from one PacketNumber to the other

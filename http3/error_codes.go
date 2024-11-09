@@ -3,7 +3,7 @@ package http3
 import (
 	"fmt"
 
-	"github.com/nxenon/xquic-go"
+	"github.com/nxenon/h3spacexgo"
 )
 
 type ErrCode quic.ApplicationErrorCode

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
 )
 
 // A PathResponseFrame is a PATH_RESPONSE frame

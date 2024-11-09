@@ -5,8 +5,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/logging"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/logging"
 )
 
 func NewTracer(w io.WriteCloser) *logging.Tracer {

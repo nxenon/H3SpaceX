@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/logging"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/logging"
 )
 
 // DefaultTracer creates a qlog file in the qlog directory specified by the QLOGDIR environment variable.

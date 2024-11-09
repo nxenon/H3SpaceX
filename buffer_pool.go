@@ -3,7 +3,7 @@ package quic
 import (
 	"sync"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
 )
 
 type packetBuffer struct {

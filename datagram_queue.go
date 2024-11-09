@@ -4,9 +4,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/nxenon/xquic-go/internal/utils"
-	"github.com/nxenon/xquic-go/internal/utils/ringbuffer"
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacexgo/internal/utils/ringbuffer"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 )
 
 const (

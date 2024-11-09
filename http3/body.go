@@ -5,7 +5,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/nxenon/xquic-go"
+	"github.com/nxenon/h3spacexgo"
 )
 
 // The HTTPStreamer allows taking over a HTTP/3 stream. The interface is implemented by:

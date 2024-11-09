@@ -1,6 +1,6 @@
 package wire
 
-import "github.com/nxenon/xquic-go/internal/protocol"
+import "github.com/nxenon/h3spacexgo/internal/protocol"
 
 // AckRange is an ACK range
 type AckRange struct {

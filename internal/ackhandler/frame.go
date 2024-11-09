@@ -1,7 +1,7 @@
 package ackhandler
 
 import (
-	"github.com/nxenon/xquic-go/internal/wire"
+	"github.com/nxenon/h3spacexgo/internal/wire"
 )
 
 // FrameHandler handles the acknowledgement and the loss of a frame.

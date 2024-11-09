@@ -3,8 +3,8 @@ package qlog
 import (
 	"fmt"
 
-	"github.com/nxenon/xquic-go/internal/wire"
-	"github.com/nxenon/xquic-go/logging"
+	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacexgo/logging"
 
 	"github.com/francoispqt/gojay"
 )

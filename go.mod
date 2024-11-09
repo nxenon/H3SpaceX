@@ -1,4 +1,4 @@
-module github.com/nxenon/xquic-go
+module github.com/nxenon/h3spacexgo
 
 go 1.23.2
 

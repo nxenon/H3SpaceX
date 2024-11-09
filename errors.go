@@ -3,7 +3,7 @@ package quic
 import (
 	"fmt"
 
-	"github.com/nxenon/xquic-go/internal/qerr"
+	"github.com/nxenon/h3spacexgo/internal/qerr"
 )
 
 type (

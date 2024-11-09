@@ -15,8 +15,8 @@ import (
 	"golang.org/x/net/http2/hpack"
 	"golang.org/x/net/idna"
 
-	"github.com/nxenon/xquic-go"
-	"github.com/nxenon/xquic-go/internal/utils"
+	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacexgo/internal/utils"
 	"github.com/quic-go/qpack"
 )
 

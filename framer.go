@@ -4,11 +4,11 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/nxenon/xquic-go/internal/ackhandler"
-	"github.com/nxenon/xquic-go/internal/protocol"
-	"github.com/nxenon/xquic-go/internal/utils/ringbuffer"
-	"github.com/nxenon/xquic-go/internal/wire"
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/internal/ackhandler"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/utils/ringbuffer"
+	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 type framer interface {
@@ -26,7 +26,7 @@ type framer interface {
 	// This is a hack.
 	// It is easier to implement than propagating an error return value in QueueControlFrame.
 	// The correct solution would be to queue frames with their respective structs.
-	// See https://github.com/nxenon/xquic-go/issues/4271 for the queueing of stream-related control frames.
+	// See https://github.com/nxenon/h3spacexgo/issues/4271 for the queueing of stream-related control frames.
 	QueuedTooManyControlFrames() bool
 }
 

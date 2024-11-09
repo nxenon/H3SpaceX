@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/wire"
-	"github.com/nxenon/xquic-go/quicvarint"
+	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacexgo/quicvarint"
 )
 
 const sessionTicketRevision = 4

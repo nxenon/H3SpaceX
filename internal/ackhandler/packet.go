@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nxenon/xquic-go/internal/protocol"
+	"github.com/nxenon/h3spacexgo/internal/protocol"
 )
 
 // A Packet is a packet

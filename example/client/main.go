@@ -11,10 +11,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/nxenon/xquic-go"
-	"github.com/nxenon/xquic-go/http3"
-	"github.com/nxenon/xquic-go/internal/testdata"
-	"github.com/nxenon/xquic-go/qlog"
+	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacexgo/http3"
+	"github.com/nxenon/h3spacexgo/internal/testdata"
+	"github.com/nxenon/h3spacexgo/qlog"
 )
 
 func main() {
