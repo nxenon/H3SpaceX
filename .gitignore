@@ -17,4 +17,6 @@ fuzzing/*/corpus/
 gomock_reflect_*/
 
 exploit/
+exploit2/
 .idea
+archives/

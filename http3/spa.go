@@ -262,11 +262,8 @@ func SendLastBytesOfStreams(allStreamsWithLastByte map[quic.Stream][]byte) {
 	}
 }
 
-func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection, allRequests []*http.Request, tlsConf *tls.Config, quicConf *quic.Config, lastByteNum int, sleepMillisecondsBeforeSendingLastByte int) map[*http.Request]*http.Response {
+func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection, allRequests []*http.Request, tlsConf *tls.Config, lastByteNum int, sleepMillisecondsBeforeSendingLastByte int) map[*http.Request]*http.Response {
 
-	if quicConf == nil {
-		quicConf = &quic.Config{}
-	}
 	if tlsConf == nil {
 		tlsConf = &tls.Config{
 			InsecureSkipVerify: true,
