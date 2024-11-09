@@ -3,7 +3,6 @@ package http3
 import (
 	"bytes"
 	"context"
-	"crypto/tls"
 	"fmt"
 	quic "github.com/nxenon/xquic-go"
 	"github.com/quic-go/qpack"
@@ -262,14 +261,7 @@ func SendLastBytesOfStreams(allStreamsWithLastByte map[quic.Stream][]byte) {
 	}
 }
 
-func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection, allRequests []*http.Request, tlsConf *tls.Config, lastByteNum int, sleepMillisecondsBeforeSendingLastByte int) map[*http.Request]*http.Response {
-
-	if tlsConf == nil {
-		tlsConf = &tls.Config{
-			InsecureSkipVerify: true,
-			NextProtos:         []string{NextProtoH3},
-		}
-	}
+func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection, allRequests []*http.Request, lastByteNum int, sleepMillisecondsBeforeSendingLastByte int) map[*http.Request]*http.Response {
 
 	var allStreams map[*http.Request]quic.Stream
 	allStreams = make(map[*http.Request]quic.Stream)
