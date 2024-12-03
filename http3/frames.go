@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/quicvarint"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/quicvarint"
 )
 
 // FrameType is the frame type of a HTTP/3 frame

@@ -3,7 +3,7 @@ package ackhandler
 import (
 	"reflect"
 
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacex/internal/wire"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

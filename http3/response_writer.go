@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nxenon/h3spacexgo"
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex"
+	"github.com/nxenon/h3spacex/internal/utils"
 
 	"github.com/quic-go/qpack"
 )

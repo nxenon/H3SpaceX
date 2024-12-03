@@ -3,9 +3,9 @@ package wire
 import (
 	"bytes"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/qerr"
-	"github.com/nxenon/h3spacexgo/quicvarint"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/qerr"
+	"github.com/nxenon/h3spacex/quicvarint"
 )
 
 // A ResetStreamFrame is a RESET_STREAM frame in QUIC

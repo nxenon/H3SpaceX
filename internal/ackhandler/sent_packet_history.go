@@ -3,7 +3,7 @@ package ackhandler
 import (
 	"fmt"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 type sentPacketHistory struct {

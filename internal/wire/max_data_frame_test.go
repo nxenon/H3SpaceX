@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/quicvarint"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/quicvarint"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

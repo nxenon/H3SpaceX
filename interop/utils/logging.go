@@ -9,10 +9,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nxenon/h3spacexgo"
-	"github.com/nxenon/h3spacexgo/internal/utils"
-	"github.com/nxenon/h3spacexgo/logging"
-	"github.com/nxenon/h3spacexgo/qlog"
+	"github.com/nxenon/h3spacex"
+	"github.com/nxenon/h3spacex/internal/utils"
+	"github.com/nxenon/h3spacex/logging"
+	"github.com/nxenon/h3spacex/qlog"
 )
 
 // GetSSLKeyLog creates a file for the TLS key log

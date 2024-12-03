@@ -5,7 +5,7 @@ import (
 	"crypto/tls"
 	"fmt"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 func SetupConfigForServer(qconf *tls.QUICConfig, _ bool, getData func() []byte, handleSessionTicket func([]byte, bool) bool) {

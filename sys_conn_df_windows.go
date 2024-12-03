@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/sys/windows"
 
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex/internal/utils"
 )
 
 const (

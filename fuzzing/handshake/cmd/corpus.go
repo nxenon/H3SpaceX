@@ -5,13 +5,13 @@ import (
 	"log"
 	"net"
 
-	fuzzhandshake "github.com/nxenon/h3spacexgo/fuzzing/handshake"
-	"github.com/nxenon/h3spacexgo/fuzzing/internal/helper"
-	"github.com/nxenon/h3spacexgo/internal/handshake"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/testdata"
-	"github.com/nxenon/h3spacexgo/internal/utils"
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	fuzzhandshake "github.com/nxenon/h3spacex/fuzzing/handshake"
+	"github.com/nxenon/h3spacex/fuzzing/internal/helper"
+	"github.com/nxenon/h3spacex/internal/handshake"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/testdata"
+	"github.com/nxenon/h3spacex/internal/utils"
+	"github.com/nxenon/h3spacex/internal/wire"
 )
 
 const alpn = "fuzz"

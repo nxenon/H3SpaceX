@@ -1,6 +1,6 @@
 package flowcontrol
 
-import "github.com/nxenon/h3spacexgo/internal/protocol"
+import "github.com/nxenon/h3spacex/internal/protocol"
 
 type flowController interface {
 	// for sending

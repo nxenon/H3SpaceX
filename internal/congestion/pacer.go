@@ -3,7 +3,7 @@ package congestion
 import (
 	"time"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 const maxBurstSizePackets = 10

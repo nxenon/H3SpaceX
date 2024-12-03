@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/nxenon/h3spacexgo"
-	mockquic "github.com/nxenon/h3spacexgo/internal/mocks/quic"
+	"github.com/nxenon/h3spacex"
+	mockquic "github.com/nxenon/h3spacex/internal/mocks/quic"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

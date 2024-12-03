@@ -3,7 +3,7 @@ package http3
 import (
 	"errors"
 
-	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacex"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

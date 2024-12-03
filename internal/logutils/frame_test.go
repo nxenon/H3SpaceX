@@ -1,8 +1,8 @@
 package logutils
 
 import (
-	"github.com/nxenon/h3spacexgo/internal/wire"
-	"github.com/nxenon/h3spacexgo/logging"
+	"github.com/nxenon/h3spacex/internal/wire"
+	"github.com/nxenon/h3spacex/logging"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

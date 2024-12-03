@@ -12,12 +12,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nxenon/h3spacexgo"
-	mockquic "github.com/nxenon/h3spacexgo/internal/mocks/quic"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/qerr"
-	"github.com/nxenon/h3spacexgo/internal/utils"
-	"github.com/nxenon/h3spacexgo/quicvarint"
+	"github.com/nxenon/h3spacex"
+	mockquic "github.com/nxenon/h3spacex/internal/mocks/quic"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/qerr"
+	"github.com/nxenon/h3spacex/internal/utils"
+	"github.com/nxenon/h3spacex/quicvarint"
 
 	"github.com/quic-go/qpack"
 

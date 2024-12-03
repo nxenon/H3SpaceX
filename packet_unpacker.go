@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nxenon/h3spacexgo/internal/handshake"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/qerr"
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacex/internal/handshake"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/qerr"
+	"github.com/nxenon/h3spacex/internal/wire"
 )
 
 type headerDecryptor interface {

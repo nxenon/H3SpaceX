@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	mockquic "github.com/nxenon/h3spacexgo/internal/mocks/quic"
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	mockquic "github.com/nxenon/h3spacex/internal/mocks/quic"
+	"github.com/nxenon/h3spacex/internal/utils"
 
 	"github.com/quic-go/qpack"
 

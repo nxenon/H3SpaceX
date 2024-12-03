@@ -4,8 +4,8 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	list "github.com/nxenon/h3spacexgo/internal/utils/linkedlist"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	list "github.com/nxenon/h3spacex/internal/utils/linkedlist"
 )
 
 // byteInterval is an interval from one ByteCount to the other

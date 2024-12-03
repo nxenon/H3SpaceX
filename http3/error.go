@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacex"
 )
 
 // Error is returned from the round tripper (for HTTP clients)

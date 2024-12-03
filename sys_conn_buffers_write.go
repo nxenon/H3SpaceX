@@ -9,8 +9,8 @@ import (
 	"net"
 	"syscall"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/utils"
 )
 
 func setSendBuffer(c net.PacketConn) error {

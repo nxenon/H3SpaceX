@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 // This cubic implementation is based on the one found in Chromiums's QUIC

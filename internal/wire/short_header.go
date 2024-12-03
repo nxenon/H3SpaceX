@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/utils"
 )
 
 // ParseShortHeader parses a short header packet.

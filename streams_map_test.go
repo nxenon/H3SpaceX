@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/nxenon/h3spacexgo/internal/flowcontrol"
-	"github.com/nxenon/h3spacexgo/internal/mocks"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/qerr"
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacex/internal/flowcontrol"
+	"github.com/nxenon/h3spacex/internal/mocks"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/qerr"
+	"github.com/nxenon/h3spacex/internal/wire"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

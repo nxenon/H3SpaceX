@@ -1,6 +1,6 @@
 package ackhandler
 
-import "github.com/nxenon/h3spacexgo/internal/wire"
+import "github.com/nxenon/h3spacex/internal/wire"
 
 // IsFrameAckEliciting returns true if the frame is ack-eliciting.
 func IsFrameAckEliciting(f wire.Frame) bool {

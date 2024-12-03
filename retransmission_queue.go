@@ -3,10 +3,10 @@ package quic
 import (
 	"fmt"
 
-	"github.com/nxenon/h3spacexgo/internal/ackhandler"
+	"github.com/nxenon/h3spacex/internal/ackhandler"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/wire"
 )
 
 type retransmissionQueue struct {

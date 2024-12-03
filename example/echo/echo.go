@@ -12,7 +12,7 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacex"
 )
 
 const addr = "localhost:4242"

@@ -9,8 +9,8 @@ import (
 	"net/http/httptest"
 	"time"
 
-	"github.com/nxenon/h3spacexgo"
-	"github.com/nxenon/h3spacexgo/internal/testdata"
+	"github.com/nxenon/h3spacex"
+	"github.com/nxenon/h3spacex/internal/testdata"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

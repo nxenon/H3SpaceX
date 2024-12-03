@@ -6,10 +6,10 @@ import (
 
 	"golang.org/x/exp/rand"
 
-	"github.com/nxenon/h3spacexgo"
-	"github.com/nxenon/h3spacexgo/fuzzing/internal/helper"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacex"
+	"github.com/nxenon/h3spacex/fuzzing/internal/helper"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/wire"
 )
 
 const version = protocol.Version1

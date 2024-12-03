@@ -1,4 +1,4 @@
-module github.com/nxenon/h3spacexgo
+module github.com/nxenon/h3spacex
 
 go 1.23.2
 

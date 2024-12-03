@@ -14,12 +14,12 @@ import (
 	"net"
 	"time"
 
-	"github.com/nxenon/h3spacexgo/fuzzing/internal/helper"
-	"github.com/nxenon/h3spacexgo/internal/handshake"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/qtls"
-	"github.com/nxenon/h3spacexgo/internal/utils"
-	"github.com/nxenon/h3spacexgo/internal/wire"
+	"github.com/nxenon/h3spacex/fuzzing/internal/helper"
+	"github.com/nxenon/h3spacex/internal/handshake"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/qtls"
+	"github.com/nxenon/h3spacex/internal/utils"
+	"github.com/nxenon/h3spacex/internal/wire"
 )
 
 var (

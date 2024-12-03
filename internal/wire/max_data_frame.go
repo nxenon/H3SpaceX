@@ -3,8 +3,8 @@ package wire
 import (
 	"bytes"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/quicvarint"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/quicvarint"
 )
 
 // A MaxDataFrame carries flow control information for the connection

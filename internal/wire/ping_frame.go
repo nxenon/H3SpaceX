@@ -1,7 +1,7 @@
 package wire
 
 import (
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 // A PingFrame is a PING frame

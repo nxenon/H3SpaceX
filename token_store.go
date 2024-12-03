@@ -3,7 +3,7 @@ package quic
 import (
 	"sync"
 
-	list "github.com/nxenon/h3spacexgo/internal/utils/linkedlist"
+	list "github.com/nxenon/h3spacex/internal/utils/linkedlist"
 )
 
 type singleOriginTokenStore struct {

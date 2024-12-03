@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/nxenon/h3spacexgo"
+	"github.com/nxenon/h3spacex"
 )
 
 // A Stream is a HTTP/3 stream.

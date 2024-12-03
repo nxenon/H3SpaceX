@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex/internal/utils"
 )
 
 func setDF(rawConn syscall.RawConn) (bool, error) {

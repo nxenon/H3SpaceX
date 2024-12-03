@@ -1,7 +1,7 @@
 package logging
 
 import (
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 // PacketTypeFromHeader determines the packet type from a *wire.Header.

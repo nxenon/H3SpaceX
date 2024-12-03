@@ -5,9 +5,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/nxenon/h3spacexgo"
-	"github.com/nxenon/h3spacexgo/internal/handshake"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
+	"github.com/nxenon/h3spacex"
+	"github.com/nxenon/h3spacex/internal/handshake"
+	"github.com/nxenon/h3spacex/internal/protocol"
 )
 
 func Fuzz(data []byte) int {

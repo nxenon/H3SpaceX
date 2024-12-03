@@ -9,8 +9,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/utils"
 )
 
 // OOBCapablePacketConn is a connection that allows the reading of ECN bits from the IP header.
@@ -33,7 +33,7 @@ func wrapConn(pc net.PacketConn) (rawConn, error) {
 				if disable, _ := strconv.ParseBool(os.Getenv("QUIC_GO_DISABLE_RECEIVE_BUFFER_WARNING")); disable {
 					return
 				}
-				log.Printf("%s. See https://github.com/nxenon/h3spacexgo/wiki/UDP-Buffer-Sizes for details.", err)
+				log.Printf("%s. See https://github.com/nxenon/h3spacex/wiki/UDP-Buffer-Sizes for details.", err)
 			})
 		}
 	}
@@ -43,7 +43,7 @@ func wrapConn(pc net.PacketConn) (rawConn, error) {
 				if disable, _ := strconv.ParseBool(os.Getenv("QUIC_GO_DISABLE_RECEIVE_BUFFER_WARNING")); disable {
 					return
 				}
-				log.Printf("%s. See https://github.com/nxenon/h3spacexgo/wiki/UDP-Buffer-Sizes for details.", err)
+				log.Printf("%s. See https://github.com/nxenon/h3spacex/wiki/UDP-Buffer-Sizes for details.", err)
 			})
 		}
 	}

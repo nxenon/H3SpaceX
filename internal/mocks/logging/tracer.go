@@ -5,8 +5,8 @@ package mocklogging
 import (
 	"net"
 
-	"github.com/nxenon/h3spacexgo/internal/mocks/logging/internal"
-	"github.com/nxenon/h3spacexgo/logging"
+	"github.com/nxenon/h3spacex/internal/mocks/logging/internal"
+	"github.com/nxenon/h3spacex/logging"
 
 	"go.uber.org/mock/gomock"
 )

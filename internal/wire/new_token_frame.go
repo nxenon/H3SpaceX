@@ -5,8 +5,8 @@ import (
 	"errors"
 	"io"
 
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/quicvarint"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/quicvarint"
 )
 
 // A NewTokenFrame is a NEW_TOKEN frame

@@ -5,7 +5,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/nxenon/h3spacexgo/internal/utils"
+	"github.com/nxenon/h3spacex/internal/utils"
 )
 
 var (
@@ -54,7 +54,7 @@ func (m *connMultiplexer) AddConn(c indexableConn) {
 	if ok {
 		// Panics if we're already listening on this connection.
 		// This is a safeguard because we're introducing a breaking API change, see
-		// https://github.com/nxenon/h3spacexgo/issues/3727 for details.
+		// https://github.com/nxenon/h3spacex/issues/3727 for details.
 		// We'll remove this at a later time, when most users of the library have made the switch.
 		panic("connection already exists") // TODO: write a nice message
 	}

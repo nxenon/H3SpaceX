@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nxenon/h3spacexgo/internal/congestion"
-	"github.com/nxenon/h3spacexgo/internal/protocol"
-	"github.com/nxenon/h3spacexgo/internal/qerr"
-	"github.com/nxenon/h3spacexgo/internal/utils"
-	"github.com/nxenon/h3spacexgo/internal/wire"
-	"github.com/nxenon/h3spacexgo/logging"
+	"github.com/nxenon/h3spacex/internal/congestion"
+	"github.com/nxenon/h3spacex/internal/protocol"
+	"github.com/nxenon/h3spacex/internal/qerr"
+	"github.com/nxenon/h3spacex/internal/utils"
+	"github.com/nxenon/h3spacex/internal/wire"
+	"github.com/nxenon/h3spacex/logging"
 )
 
 const (

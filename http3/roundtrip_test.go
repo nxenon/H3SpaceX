@@ -10,8 +10,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nxenon/h3spacexgo"
-	"github.com/nxenon/h3spacexgo/internal/qerr"
+	"github.com/nxenon/h3spacex"
+	"github.com/nxenon/h3spacex/internal/qerr"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
