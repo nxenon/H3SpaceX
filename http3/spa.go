@@ -206,11 +206,11 @@ func GetLastByteDataFrame(b []byte) []byte {
 
 }
 
-func GetRequestHeadersBytes(req http.Request) []byte {
+func GetRequestHeadersBytes(req http.Request, setContentLength bool) []byte {
 	buf := &bytes.Buffer{}
 	requestWriter := NewXRequestWriter(nil)
 	isGzipped := true
-	err := requestWriter.NewXwriteHeaders(buf, &req, isGzipped)
+	err := requestWriter.NewXwriteHeaders(buf, &req, isGzipped, setContentLength)
 	if err != nil {
 		panic(err)
 	}
@@ -219,13 +219,14 @@ func GetRequestHeadersBytes(req http.Request) []byte {
 }
 
 func GetRequestFinalPayload(req http.Request) []byte {
+	setContentLength := true
 	var requestDataBytes []byte
 	if req.Body != nil {
 		//requestDataBytes := newGetDataFrameBytes(req.Body, req.ContentLength)
 		requestDataBytes = GetDataFrameBytes(req)
 	}
 
-	finalPayload := append(GetRequestHeadersBytes(req), requestDataBytes...)
+	finalPayload := append(GetRequestHeadersBytes(req, setContentLength), requestDataBytes...)
 
 	return finalPayload
 }
@@ -261,7 +262,12 @@ func SendLastBytesOfStreams(allStreamsWithLastByte map[quic.Stream][]byte) {
 	}
 }
 
-func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection, allRequests []*http.Request, lastByteNum int, sleepMillisecondsBeforeSendingLastByte int) map[*http.Request]*http.Response {
+func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
+	allRequests []*http.Request,
+	lastByteNum int,
+	sleepMillisecondsBeforeSendingLastByte int,
+	setContentLength bool,
+) map[*http.Request]*http.Response {
 
 	var allStreams map[*http.Request]quic.Stream
 	allStreams = make(map[*http.Request]quic.Stream)
@@ -271,7 +277,7 @@ func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection, allReque
 	for _, request := range allRequests {
 		var headersAndDataBytesMinusLastByte []byte
 
-		headersFrameByte := GetRequestHeadersBytes(*request)
+		headersFrameByte := GetRequestHeadersBytes(*request, setContentLength)
 		dataFrameBytes := GetDataFrameBytesWithLengthMinusLastByteNum(*request, lastByteNum)
 
 		allDataBytesExceptLastByte := dataFrameBytes[:len(dataFrameBytes)-lastByteNum]

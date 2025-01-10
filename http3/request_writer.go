@@ -296,14 +296,14 @@ func NewXRequestWriter(logger utils.Logger) *requestWriter {
 	}
 }
 
-func (w *requestWriter) NewXwriteHeaders(wr io.Writer, req *http.Request, gzip bool) error {
+func (w *requestWriter) NewXwriteHeaders(wr io.Writer, req *http.Request, gzip bool, setContentLength bool) error {
 	// fmt.Println("request_writer.go http3 func (w *requestWriter) newXwriteHeaders(wr io.Writer, req *http.Request, gzip bool) error {")
 	w.mutex.Lock()
 	defer w.mutex.Unlock()
 	defer w.encoder.Close()
 	defer w.headerBuf.Reset()
 
-	if err := w.newXencodeHeaders(req, gzip, "", actualContentLength(req)); err != nil {
+	if err := w.newXencodeHeaders(req, gzip, "", actualContentLength(req), setContentLength); err != nil {
 		return err
 	}
 
@@ -316,7 +316,7 @@ func (w *requestWriter) NewXwriteHeaders(wr io.Writer, req *http.Request, gzip b
 	return err
 }
 
-func (w *requestWriter) newXencodeHeaders(req *http.Request, addGzipHeader bool, trailers string, contentLength int64) error {
+func (w *requestWriter) newXencodeHeaders(req *http.Request, addGzipHeader bool, trailers string, contentLength int64, setContentLength bool) error {
 	// fmt.Println("request_writer.go http3 func (w *requestWriter) newXencodeHeaders(req *http.Request, addGzipHeader bool, trailers string, contentLength int64) error {")
 	host := req.Host
 	if host == "" {
@@ -416,8 +416,10 @@ func (w *requestWriter) newXencodeHeaders(req *http.Request, addGzipHeader bool,
 				f(k, v)
 			}
 		}
-		if shouldSendReqContentLength(req.Method, contentLength) {
-			f("content-length", strconv.FormatInt(contentLength, 10))
+		if setContentLength {
+			if shouldSendReqContentLength(req.Method, contentLength) {
+				f("content-length", strconv.FormatInt(contentLength, 10))
+			}
 		}
 		if addGzipHeader {
 			f("accept-encoding", "gzip")
