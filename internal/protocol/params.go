@@ -9,7 +9,7 @@ const DesiredReceiveBufferSize = (1 << 20) * 2 // 2 MB
 const DesiredSendBufferSize = (1 << 20) * 2 // 2 MB
 
 // InitialPacketSizeIPv4 is the maximum packet size that we use for sending IPv4 packets.
-const InitialPacketSizeIPv4 = 1252
+const InitialPacketSizeIPv4 = 1252 // 1332 max which was tested
 
 // InitialPacketSizeIPv6 is the maximum packet size that we use for sending IPv6 packets.
 const InitialPacketSizeIPv6 = 1232

@@ -206,6 +206,18 @@ func GetLastByteDataFrame(b []byte) []byte {
 
 }
 
+func GetLastByteZeroDataFrameForGetRequests() []byte {
+
+	length := []byte{byte(0)}
+	buf := []byte{
+		0x00,
+	}
+	buf = append(buf, length...)
+
+	return buf
+
+}
+
 func GetRequestHeadersBytes(req http.Request, setContentLength bool) []byte {
 	buf := &bytes.Buffer{}
 	requestWriter := NewXRequestWriter(nil)
@@ -247,6 +259,22 @@ func GetRequestObject(urlString string, method string, headersMap map[string]str
 		}
 		req = reqx
 	}
+	for key, value := range headersMap {
+		req.Header.Set(key, value)
+	}
+	return *req, nil
+}
+
+func GetRequestObjectGetWithBody(urlString string, method string, headersMap map[string]string, bodyData []byte) (http.Request, error) {
+	method = strings.ToUpper(method)
+	var req *http.Request
+
+	reqx, err2 := http.NewRequest(method, urlString, bytes.NewReader(bodyData))
+	if err2 != nil {
+		return http.Request{}, err2
+	}
+	req = reqx
+
 	for key, value := range headersMap {
 		req.Header.Set(key, value)
 	}
@@ -301,6 +329,35 @@ func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
 
 	// send all last bytes
 	SendLastBytesOfStreams(allStreamsWithLastByte)
+
+	CloseAllStreams(allStreams)
+	streamsResponseMap := ReadFromAllStreams(allStreams)
+
+	return streamsResponseMap
+}
+
+func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
+	allRequests []*http.Request,
+	sleepMillisecondsBeforeSendingLastByte int,
+) map[*http.Request]*http.Response {
+
+	var allStreams map[*http.Request]quic.Stream
+	allStreams = make(map[*http.Request]quic.Stream)
+	var allStreamsWithHeadersByte map[quic.Stream][]byte
+	allStreamsWithHeadersByte = make(map[quic.Stream][]byte)
+
+	for _, request := range allRequests {
+		headersFrameByte := GetRequestHeadersBytes(*request, true)
+		// send headers+data except last byte
+		biStream := GetBidirectionalStream(quicConn)
+		allStreamsWithHeadersByte[biStream] = headersFrameByte
+		allStreams[request] = biStream // for getting responses
+	}
+
+	time.Sleep(time.Duration(sleepMillisecondsBeforeSendingLastByte) * time.Millisecond)
+
+	// send all last bytes
+	SendLastBytesOfStreams(allStreamsWithHeadersByte) //
 
 	CloseAllStreams(allStreams)
 	streamsResponseMap := ReadFromAllStreams(allStreams)
