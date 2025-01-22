@@ -130,5 +130,8 @@ func main() {
 ## Exploits Sample
 See [Exploit](./exploit) Directory
 
+## Lab (HTTP/2/3 Web Application)
+For testing exploits see [Rc-H3-WebApp](https://github.com/nxenon/rc-h3-webapp/) repo.
+
 ## References
 - [quic-go](https://github.com/quic-go/quic-go) as base library
