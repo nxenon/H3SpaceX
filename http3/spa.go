@@ -290,7 +290,7 @@ func SendLastBytesOfStreams(allStreamsWithLastByte map[quic.Stream][]byte) {
 	}
 }
 
-func SendRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
+func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 	allRequests []*http.Request,
 	lastByteNum int,
 	sleepMillisecondsBeforeSendingLastByte int,
