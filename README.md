@@ -128,7 +128,10 @@ func main() {
 
 
 ## Exploits Sample
-See [Exploit](./exploit) Directory
+See [Exploit](./exploit) Directory. It contains:
+- [Last Frame Synchronization for Requests with a Body](exploit/README.md#last-frame-synchronization-for-requests-with-a-body)
+- [Last Frame Synchronization for Requests without Body (GET requests within a single packet)](exploit/README.md#last-frame-synchronization-for-requests-without-body-get-requests-within-a-single-packet)
+- [## Last Frame Synchronization for Requests without Body (GET requests with FAKE DATA Frames)](exploit/README.md#last-frame-synchronization-for-requests-without-body-get-requests-with-fake-data-frames)
 
 ## Lab (HTTP/2/3 Web Application)
 For testing exploits see [Rc-H3-WebApp](https://github.com/nxenon/rc-h3-webapp/) repo.
