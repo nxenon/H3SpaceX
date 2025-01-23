@@ -28,13 +28,11 @@ func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 - This function is for requests `which do *not* have body`!
 - Function parameters:
     - first param gets an array of requests which need to be sent.
-    - second param is for number of milliseconds which library waits before sending last DATA frames
 - Function return:
     - a map of requests with value of their response
 ```go
 func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
 	allRequests []*http.Request,
-	sleepMillisecondsBeforeSendingLastByte int,
 ) map[*http.Request]*http.Response
 ```
 

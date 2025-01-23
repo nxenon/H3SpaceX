@@ -338,7 +338,6 @@ func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 
 func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
 	allRequests []*http.Request,
-	sleepMillisecondsBeforeSendingLastByte int,
 ) map[*http.Request]*http.Response {
 
 	var allStreams map[*http.Request]quic.Stream
@@ -354,7 +353,7 @@ func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
 		allStreams[request] = biStream // for getting responses
 	}
 
-	time.Sleep(time.Duration(sleepMillisecondsBeforeSendingLastByte) * time.Millisecond)
+	//time.Sleep(time.Duration(sleepMillisecondsBeforeSendingLastByte) * time.Millisecond)
 
 	// send all last bytes
 	SendLastBytesOfStreams(allStreamsWithHeadersByte) //
