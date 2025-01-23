@@ -9,10 +9,11 @@ There are two methods for exploiting last frame synchronization:
 - Function `SendRequestsWithLastFrameSynchronizationMethod`:
 - This function is for requests `which have body`!
 - Function parameters:
-  - first param gets an array of requests which need to be sent.
-  - second param is for number of bytes which needs to be kept from end of the DATA frame. (at least & best 1)
-  - third param is for number of milliseconds which library waits before sending last DATA frames
-  - fourth param is for setting or unsetting Content-Length header. If false, the Content-Header will not be set, unless you set it directly in requests headers
+  - first param gets QUIC connection (type: quic.Connection)
+  - second param gets an array of requests which need to be sent.
+  - third param is for number of bytes which needs to be kept from end of the DATA frame. (at least & best 1)
+  - fourth param is for number of milliseconds which library waits before sending last DATA frames
+  - fifth param is for setting or unsetting Content-Length header. If false, the Content-Header will not be set, unless you set it directly in requests headers
 - Function return:
   - a map of requests with value of their response
 ```go
@@ -27,7 +28,8 @@ func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 - Function `SendGetNoBodyRequestsWithSinglePacketAttackMethod`:
 - This function is for requests `which do *not* have body`!
 - Function parameters:
-    - first param gets an array of requests which need to be sent.
+    - first param gets QUIC connection (type: quic.Connection)g
+    - second param gets an array of requests which need to be sent.
 - Function return:
     - a map of requests with value of their response
 ```go
