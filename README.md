@@ -40,7 +40,9 @@ func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
 
 ### Installation
 
+    go mod init PROJECT_NAME
     go get github.com/nxenon/h3spacex
+    go mod tidy
 
 
 ### Steps to Call Functions
