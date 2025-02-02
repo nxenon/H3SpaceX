@@ -42,6 +42,7 @@ func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
 
     go mod init PROJECT_NAME
     go get github.com/nxenon/h3spacex
+    Write the code (exploit) then run following command (to include all dependencies in go.mod):
     go mod tidy
 
 
