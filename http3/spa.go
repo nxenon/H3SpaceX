@@ -336,7 +336,7 @@ func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 	return streamsResponseMap
 }
 
-func SendRequestsWithoutBodyWithinASinglePacketAttack(quicConn quic.Connection,
+func SendRequestsWithoutBodyWithinASinglePacket(quicConn quic.Connection,
 	allRequests []*http.Request,
 ) map[*http.Request]*http.Response {
 
