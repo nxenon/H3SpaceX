@@ -25,15 +25,15 @@ func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 ) map[*http.Request]*http.Response
 ```
 
-- Function `SendGetNoBodyRequestsWithSinglePacketAttackMethod`:
+- Function `SendRequestsWithoutBodyWithinASinglePacketAttack`:
 - This function is for requests `which do *not* have body`!
 - Function parameters:
-    - first param gets QUIC connection (type: quic.Connection)g
+    - first param gets QUIC connection (type: quic.Connection)
     - second param gets an array of requests which need to be sent.
 - Function return:
     - a map of requests with value of their response
 ```go
-func SendGetNoBodyRequestsWithSinglePacketAttackMethod(quicConn quic.Connection,
+func SendRequestsWithoutBodyWithinASinglePacketAttack(quicConn quic.Connection,
 	allRequests []*http.Request,
 ) map[*http.Request]*http.Response
 ```
