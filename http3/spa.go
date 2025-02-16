@@ -302,38 +302,67 @@ func SendRequestsWithLastFrameSynchronizationMethod(quicConn quic.Connection,
 	var allStreamsWithLastByte map[quic.Stream][]byte
 	allStreamsWithLastByte = make(map[quic.Stream][]byte)
 
-	for _, request := range allRequests {
-		var headersAndDataBytesMinusLastByte []byte
+	if lastByteNum < 0 {
+		panic("Last Byte Number param can not be below 0!")
+	} else if lastByteNum == 0 {
+		fmt.Println("0 frame")
+		for _, request := range allRequests {
+			var headersAndDataBytes []byte
 
-		headersFrameByte := GetRequestHeadersBytes(*request, setContentLength)
-		dataFrameBytes := GetDataFrameBytesWithLengthMinusLastByteNum(*request, lastByteNum)
+			headersFrameByte := GetRequestHeadersBytes(*request, setContentLength)
+			dataFrameBytes := GetDataFrameBytesWithLengthMinusLastByteNum(*request, lastByteNum)
 
-		allDataBytesExceptLastByte := dataFrameBytes[:len(dataFrameBytes)-lastByteNum]
+			// all bytes except last byte
+			headersAndDataBytes = append(headersFrameByte, dataFrameBytes...)
 
-		// all bytes except last byte
-		headersAndDataBytesMinusLastByte = append(headersFrameByte, allDataBytesExceptLastByte...)
+			// send headers+data except last byte
+			biStream := GetBidirectionalStream(quicConn)
 
-		finalByte := dataFrameBytes[len(dataFrameBytes)-lastByteNum:] // last byte
-		finalByteDataFrame := GetLastByteDataFrame(finalByte)         // last byte data frame
+			allStreams[request] = biStream // for getting responses
+			SendRequestBytesInStream(biStream, headersAndDataBytes)
 
-		// send headers+data except last byte
-		biStream := GetBidirectionalStream(quicConn)
+		}
 
-		allStreamsWithLastByte[biStream] = finalByteDataFrame // for sending last byte
-		allStreams[request] = biStream                        // for getting responses
-		SendRequestBytesInStream(biStream, headersAndDataBytesMinusLastByte)
+		time.Sleep(time.Duration(sleepMillisecondsBeforeSendingLastByte) * time.Millisecond)
 
+		CloseAllStreams(allStreams)
+		streamsResponseMap := ReadFromAllStreams(allStreams)
+
+		return streamsResponseMap
+	} else {
+		for _, request := range allRequests {
+			var headersAndDataBytesMinusLastByte []byte
+
+			headersFrameByte := GetRequestHeadersBytes(*request, setContentLength)
+			dataFrameBytes := GetDataFrameBytesWithLengthMinusLastByteNum(*request, lastByteNum)
+
+			allDataBytesExceptLastByte := dataFrameBytes[:len(dataFrameBytes)-lastByteNum]
+
+			// all bytes except last byte
+			headersAndDataBytesMinusLastByte = append(headersFrameByte, allDataBytesExceptLastByte...)
+
+			finalByte := dataFrameBytes[len(dataFrameBytes)-lastByteNum:] // last byte
+			finalByteDataFrame := GetLastByteDataFrame(finalByte)         // last byte data frame
+
+			// send headers+data except last byte
+			biStream := GetBidirectionalStream(quicConn)
+
+			allStreamsWithLastByte[biStream] = finalByteDataFrame // for sending last byte
+			allStreams[request] = biStream                        // for getting responses
+			SendRequestBytesInStream(biStream, headersAndDataBytesMinusLastByte)
+
+		}
+
+		time.Sleep(time.Duration(sleepMillisecondsBeforeSendingLastByte) * time.Millisecond)
+
+		// send all last bytes
+		SendLastBytesOfStreams(allStreamsWithLastByte)
+
+		CloseAllStreams(allStreams)
+		streamsResponseMap := ReadFromAllStreams(allStreams)
+
+		return streamsResponseMap
 	}
-
-	time.Sleep(time.Duration(sleepMillisecondsBeforeSendingLastByte) * time.Millisecond)
-
-	// send all last bytes
-	SendLastBytesOfStreams(allStreamsWithLastByte)
-
-	CloseAllStreams(allStreams)
-	streamsResponseMap := ReadFromAllStreams(allStreams)
-
-	return streamsResponseMap
 }
 
 func SendRequestsWithoutBodyWithinASinglePacket(quicConn quic.Connection,
